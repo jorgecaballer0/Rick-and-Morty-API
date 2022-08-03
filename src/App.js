@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "@mui/material";
+import { Box } from "@mui/system";
+import { Typography } from "@mui/material";
+import "./App.css";
+import CharacterList from "./components/CharacterList/CharacterList";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Container>
+      <Box>
+        <Typography
+          variant="h3"
+          color="white"
+          sx={{
+            textAlign: "center",
+            padding: "1rem",
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Personajes de Rick and Morty
+        </Typography>
+        <CharacterList />
+      </Box>
+    </Container>
   );
 }
 
